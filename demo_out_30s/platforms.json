@@ -1,0 +1,40 @@
+[
+  {
+    "platform": "douyin",
+    "label": "抖音",
+    "aspect": "9:16",
+    "width": 1080,
+    "height": 1920,
+    "title": "久坐腰酸，三个动作别做错",
+    "cover_text": "久坐腰酸",
+    "hashtags": [
+      "#久坐腰酸",
+      "#久坐",
+      "#腰酸",
+      "#办公室健身",
+      "#干货分享"
+    ],
+    "suggested_duration_s": 30,
+    "trim_note": "时长 30.0s，未超过平台上限 300s，可直接发布。",
+    "ffmpeg": "ffmpeg -y -f concat -safe 0 -i shots.txt -f lavfi -i anullsrc=r=44100:cl=stereo -shortest -vf \"scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=0x0b0b12\" -c:v libx264 -crf 23 -preset medium -pix_fmt yuv420p -r 30 douyin_30s.mp4"
+  },
+  {
+    "platform": "kuaishou",
+    "label": "快手",
+    "aspect": "9:16",
+    "width": 1080,
+    "height": 1920,
+    "title": "久坐腰酸，三个动作别做错",
+    "cover_text": "久坐腰酸",
+    "hashtags": [
+      "#久坐腰酸",
+      "#久坐",
+      "#腰酸",
+      "#办公室健身",
+      "#干货分享"
+    ],
+    "suggested_duration_s": 30,
+    "trim_note": "时长 30.0s，未超过平台上限 300s，可直接发布。",
+    "ffmpeg": "ffmpeg -y -f concat -safe 0 -i shots.txt -f lavfi -i anullsrc=r=44100:cl=stereo -shortest -vf \"scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=0x0b0b12\" -c:v libx264 -crf 23 -preset medium -pix_fmt yuv420p -r 30 kuaishou_30s.mp4"
+  }
+]
